@@ -30,4 +30,4 @@ function mutation(arr) {
   console.log(mutation(["voodoo", "no"]));
   console.log(mutation(["ate", "date"]));
   console.log(mutation(["Tiger", "Zebra"]));
-  console.log(mutation(["Noel", "Ole"]));
+  console.log(mutation(["Noel", "Ole"])); 
