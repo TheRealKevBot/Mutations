@@ -8,7 +8,26 @@
 
 
 function mutation(arr) {
-    return arr
+    let word1 = [...arr[0].toLowerCase()]
+    let word2 = [...arr[1].toLowerCase()]
+    let matches = []
+    let noMatches = []
+    word2.map(letter => {
+        word1.includes(letter) ? matches.push(letter) : noMatches.push(letter)
+    })
+    return word2.length === matches.length ? true : false
   }
   
-  mutation(["hello", "hey"]);
+  console.log(mutation(["Hey", "hey"]));
+  console.log(mutation(["hello", "hey"]));
+  console.log(mutation(["hello", "Hello"]));
+  console.log(mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]));
+  console.log(mutation(["Mary", "Army"]));
+  console.log(mutation(["Mary", "Aarmy"]));
+  console.log(mutation(["Alien", "line"]));
+  console.log(mutation(["floor", "for"]));
+  console.log(mutation(["hello", "neo"]));
+  console.log(mutation(["voodoo", "no"]));
+  console.log(mutation(["ate", "date"]));
+  console.log(mutation(["Tiger", "Zebra"]));
+  console.log(mutation(["Noel", "Ole"]));
